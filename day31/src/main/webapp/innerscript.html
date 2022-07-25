@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JS 내부 script</title>
+<style>
+#box {
+	width: 100px;
+	height: 100px;
+	background-color: coral;
+	cursor: pointer; /*마우스를 올렸을 때 클릭 버튼으로 변함*/
+	transition: 1s ease;
+}
+</style>
+</head>
+<body>
+	<div id="box" onclick="changeColor(this)"></div>
+
+	<script>
+//function changeColor(obj){
+//	obj.style.backgroundColor="lightblue";
+//}
+const changeColor = (obj) => {
+	obj.style.backgroundColor="blue";
+}
+</script>
+</body>
+</html>

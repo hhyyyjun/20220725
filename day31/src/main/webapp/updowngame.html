@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+div {
+	width: 100px;
+	height: 20px;
+	text-align: center;
+	margin-bottom : 2px;
+}
+</style>
+</head>
+<body>
+
+	<!-- 업다운 게임 1~100중에서 정답 입력 >> prompt > 정답은 랜덤하게 설정 > 랜덤은 Math 클래스 사용 -->
+	<script type="text/javascript">
+		//math.round함수 = 반올림
+		//math.random함수 = 랜덤값 생성 >> 랜덤함수는 0~1 출력이다
+		var random = Math.round((Math.random() * 99) + 1); //0~1출력에 *99+1 >> 1~100
+		console.log(random); //랜덤값 확인
+		var box = '<div style="background-color:blue";>'+'ddd'+'</div>';
+		while (true) {
+			var input = prompt("값을 입력하세요");
+			if (random < input) {
+				var box = '<div style="background-color:lightblue";>'+'다운!'+'</div>';
+				alert("down!");
+				document.write(box);
+				console.log("down!");
+				continue;
+			} else if (random > input) {
+				var box = '<div style="background-color:lightgreen";>'+'업!'+'</div>';
+				document.write(box);
+				alert("up!");
+				console.log("up!");
+				continue;
+			} else if (random = input) {
+				var box = '<div style="background-color:pink";>'+'정답입니다!'+'</div>';
+				document.write(box);
+				alert("correct");
+				console.log("correct!");
+				break;
+			}
+		}
+	</script>
+</body>
+</html>
